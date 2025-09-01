@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Sorprendente</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      padding: 32px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .image-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      background: #fff;
+      transition: transform 0.2s;
+    }
+    .image-card:hover {
+      transform: scale(1.03);
+    }
+    .image-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s;
+    }
+    .image-card:hover img {
+      filter: brightness(1);
+    }
+    .image-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 16px 16px 16px;
+      background: linear-gradient(0deg, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.1) 100%);
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      .image-card img {
+        height: 160px;
+      }
+      .image-text {
+        font-size: 1rem;
+        padding: 12px 8px 8px 8px;
+      }
+      .gallery {
+        padding: 12px;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; margin-top:32px; color:#333;">Galería Sorprendente</h1>
+  <div class="gallery">
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Montaña">
+      <div class="image-text">Descubre la magia de lo inesperado</div>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Bosque">
+      <div class="image-text">Donde los sueños se encuentran con la realidad</div>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Ciudad">
+      <div class="image-text">Cada momento es una nueva aventura</div>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Playa">
+      <div class="image-text">La belleza está en los detalles</div>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1465378790036-ffd1872f1b36?auto=format&fit=crop&w=800&q=80" alt="Desierto">
+      <div class="image-text">Atrévete a imaginar lo imposible</div>
+    </div>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Noche">
+      <div class="image-text">Tu historia comienza aquí</div>
+    </div>
+  </div>
+</body>
+</html>
